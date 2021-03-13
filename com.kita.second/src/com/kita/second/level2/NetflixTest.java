@@ -2,13 +2,19 @@ package com.kita.second.level2;
 
 public class NetflixTest {
 	public static void main(String[] args) {
-		Game g = new Game("피파");
-		g = new Overwatch("");
-		g = new BattleGround("");
+		// 매개변수의 다형성
+		ProGamer hong = new ProGamer();
+		Game gm = new Game();
+		BattleGround bg = new BattleGround();
+		Overwatch ow = new Overwatch();
 		
-		Netflix nf = new Drama("펜트하우스");
-		nf = new Movie("승리호");
-//		nf = new Comedy("아는형님");
+		hong.work(gm);
+		hong.work(bg);
+		hong.work(ow);
+		
+		
+//		Viewer rv = new Viewer();
+//		rv.chooseNew();
 	
 		
 		

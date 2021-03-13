@@ -1,8 +1,8 @@
 package com.kita.second.level2.sogilli;
 
 public class Hyori {
-	// public : 제한x
-	// protected :
+	// public : 제한 x
+	// protected : 동일 패키지와 동일 패키지에 포함되지는 않지만 하위 클래스 관계에 있는 클래스도 접근.
 	// default : 본인 패키지 내부 
 	// private : 자신 클래스 내부
 	

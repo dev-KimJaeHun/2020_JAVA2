@@ -1,11 +1,11 @@
 package com.kita.second.level2;
 
 public class Singleton {
-	private static Singleton sg = null;
+	private static Singleton sg = null;		// 1단계
 	
-	private Singleton() {}
+	private Singleton() {}	// 2단계
 	
-	public static Singleton getInstance() {
+	public static Singleton getInstance() {	// 3단계
 		if(sg == null) {
 			sg = new Singleton();
 		}

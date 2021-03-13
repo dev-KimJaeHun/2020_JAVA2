@@ -6,6 +6,7 @@ public class Dog extends Animal {
 	public Dog(String name) {
 		super(name); // Animal(name)
 //		super.age = 5;
+		this.age = 10;
 		this.cutiness = true;
 //		super.type = "";
 //		super.method();

@@ -10,7 +10,6 @@ public class AnimalTest {
 		Dog d = (Dog)ani;
 		d.bark();
 		
-		
 		System.out.println("-------------------");
 		Dog d1 = new Dog("누렁이");
 		System.out.println("d1의 이름은 " + d1.name);

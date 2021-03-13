@@ -20,6 +20,4 @@ public class Sugar {
 //		boolean star = hr.star;
 		Sangsun ss = new Sangsun();
 	}
-	
-	
 }

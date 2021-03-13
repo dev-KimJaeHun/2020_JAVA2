@@ -1,10 +1,8 @@
-package com.kita.second.level2;
+package com.kita.second.level3;
 
-public class Animal {
-	
+public abstract class Animal {
 	String name;
 	int age;
-	private String type;
 	
 	public Animal(String name) {
 		this.name = name;
@@ -14,5 +12,4 @@ public class Animal {
 		System.out.println("동물이 운다");
 	}
 	
-	private void method() {}
 }

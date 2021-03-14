@@ -8,8 +8,10 @@ public abstract class Animal {
 		this.name = name;
 	}
 	
-	void cry() {
-		System.out.println("동물이 운다");
+	void breathe() {
+		System.out.println("숨을 쉰다.");
 	}
+	
+	abstract void cry();
 	
 }

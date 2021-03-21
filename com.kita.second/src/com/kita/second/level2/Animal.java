@@ -14,5 +14,5 @@ public class Animal {
 		System.out.println("동물이 운다");
 	}
 	
-	// private void method() {}
+	private void method() {}
 }

@@ -1,7 +1,5 @@
 package com.kita.second.level3.cafe;
 
-//import java.util.Arrays;
-
 public class Menu {
     private MenuItem[] arr = new MenuItem[4];
 

@@ -6,6 +6,10 @@ public class Dog extends Animal{
 
 	}
 	
+	String getName() {
+		return name;
+	}
+	
 	@Override
 	void cry() {
 		System.out.println("개가 운다.");

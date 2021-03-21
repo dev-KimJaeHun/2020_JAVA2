@@ -3,45 +3,46 @@ package com.kita.second.level1.baseball;
 import java.util.Scanner;
 
 public class MyBall {
-	// 내가 숫자값 입력하고 메모 처리하는 클래스
-	// 필드
-	
-	private int[] myArr;
-	private Scanner sc;
-	
-	public MyBall(int gameCnt) {
-		myArr = new int[gameCnt];
-		setRandom();
+	// 내가 숫자값 입력하고 예외 처리하는 클래스
+		// 필드
+		private int[] myArr;
+		private Scanner scan;
 		
-	}
+		public MyBall(int gameCnt) {
+			myArr = new int[gameCnt];
+			scan = new Scanner(System.in);
+		}
+		
+		// 메소드
+		// 숫자를 입력받기 setNumbers()
 
-	public int[] getRNum() {
-		return myArr;
-	}
-
-	public void setRandom() {
-		sc = new Scanner(System.in);
-		int max = 9;
-		int min = 1;
-		System.out.println("숫자야구게임 시작!");
-			// 내가 정수값 3개 입력받아서 myArr에 넣기
-			for(int i=0; i<myArr.length; i++) {
-				System.out.printf("값%d: \n", i+1);
-				myArr[i] = sc.nextInt(); 
-				if(myArr[i] < min || myArr[i] > max) {
-					System.out.println("범위 밖의 숫자입니다.");
+		void setNumbers() {
+			for(int i=0; i<myArr.length; i++) { // myArr의 길이만큼
+				// scanner 사용해서 값 입력받기
+				System.out.printf("값%d: ", i+1);
+				String val = scan.next();
+				try {
+					myArr[i] = Integer.parseInt(val);
+				} catch(Exception e) {
 					i--;
+					System.out.println("1~9까지의 숫자값을 입력하시오.");
 					continue;
 				}
+				
 				for(int z=0; z<i; z++) {
-					if(myArr[i] == myArr[z]) {
-						System.out.println("중복된 숫자입니다.");
+					if(myArr[z]==myArr[i]) {
 						i--;
+						System.out.println("중복된 값이 존재함.");
 						break;
 					}
 				}
-			} sc.close();
-	}
+			}
+		}
+		
+		
+		int getMyNum(int idx) {
+			return myArr[idx];
+		}
 
 
 }
